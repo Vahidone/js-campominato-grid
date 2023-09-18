@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: violet;
+}
+
+header .button-game {
+  width: 100px;
+  height: 50px;
+  line-height: 35px;
+}
+
+
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.container-game {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: brown;
+}
+
+.square {
+  width: calc(100% / 10);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.square span {
+  display: none;
+}
+.square.clicked {
+  background-color: cadetblue;
+}
+.square.clicked span {
+  display: block;
+}
