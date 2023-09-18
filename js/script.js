@@ -5,6 +5,32 @@ const easyBtn = document.getElementById("btnEasy");
 const normalBtn = document.getElementById("btnNormal");
 const hardBtn = document.getElementById("btnHard");
 
+easyBtn.addEventListener('click', 
+  function() {
+    gridContainer.innerHTML = "";
+    gridDifficulty(100, "squareEasy")
+    squareClickAdd('[class^="square"]', 'active')
+        
+  }
+);
+
+normalBtn.addEventListener('click', 
+  function() {
+    gridContainer.innerHTML = ""
+    gridDifficulty(81, "squareNormal")   
+    squareClickAdd('[class^="square"]', 'active')
+        
+  }
+    
+);
+
+hardBtn.addEventListener('click', 
+    function() {
+      gridContainer.innerHTML = "";
+      gridDifficulty(49, "squareHard")
+      squareClickAdd('[class^="square"]', 'active')
+    }
+);
 
 
 
