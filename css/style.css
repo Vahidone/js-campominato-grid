@@ -1,59 +1,93 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(167, 224, 186);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header {
-  height: 100px;
-  padding-right: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: darkblue;
+  margin: 20px 0;
+}
+h3 {
+  color: darkblue;
+  text-align: right;
+  margin-right: 200px;
+  text-decoration: underline;
+}
+
+.btn-box {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  background-color: violet;
-}
-
-header .button-game {
-  width: 100px;
-  height: 50px;
-  line-height: 35px;
+  flex-direction: column;
+  align-items: end;
+  margin: 0px 200px;
 }
 
 
-.main-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
+.btn {
+  width: 80px;
+  height: 40px;
+  color: white;
+  background-color: rgb(0, 34, 0);
+  padding: 10px 14px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  
 }
 
-.container-game {
+.btn:hover {
+  box-shadow: 0px 0px 5px 2px white;
+  color: white;
+}
+
+.btn:active {
+  background-color: #e76f51;
+}
+
+#container {
   width: 800px;
   height: 800px;
+  margin: 0 auto;
+  
   display: flex;
   flex-wrap: wrap;
-  background-color: brown;
 }
 
-.square {
-  width: calc(100% / 10);
-  aspect-ratio: 1 / 1;
+*[class^="square"] {
+  border: solid 5px blue;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  border: 2px solid white;
+  color: #ffffff;
 }
 
-.square span {
-  display: none;
+.squareEasy {
+  width: 10%;
+  height: 10%;
 }
-.square.clicked {
-  background-color: cadetblue;
+
+
+.squareNormal {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
 }
-.square.clicked span {
-  display: block;
+
+.squareHard {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
+
+.active {
+  background-color: orangered;
+  cursor: not-allowed;
 }
