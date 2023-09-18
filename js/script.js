@@ -12,6 +12,7 @@ easyBtn.addEventListener('click',
     squareClickAdd('[class^="square"]', 'active')
         
   }
+  
 );
 
 normalBtn.addEventListener('click', 
